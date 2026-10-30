@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+    touch-action: manipulation;
+  }
+  
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Fredoka', 'Outfit', sans-serif;
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes pulse-magic {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(236, 72, 153, 0.7));
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.1) rotate(180deg); }
+}
+
+@keyframes bubble-rise {
+  0% { transform: translateY(0) scale(0.6); opacity: 0.9; }
+  100% { transform: translateY(-70px) scale(1.1); opacity: 0; }
+}
+
+.animate-float {
+  animation: float-gentle 3.5s ease-in-out infinite;
+}
+
+.animate-magic-glow {
+  animation: pulse-magic 2.5s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.6s ease-in-out infinite;
+}
+
+.animate-bubble {
+  animation: bubble-rise 1.2s ease-out forwards;
+}
+
+/* Custom scrollbar for inventory & lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.7);
+}

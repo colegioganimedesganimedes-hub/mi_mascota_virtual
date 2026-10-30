@@ -1,0 +1,6 @@
+{
+  "name": "Mi Mascota Virtual",
+  "description": "Adopta, cuida, personaliza y evoluciona criaturas mágicas y fantásticas en un mundo interactivo lleno de minijuegos y recompensas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
